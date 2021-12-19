@@ -29,7 +29,7 @@ for project in test-func test-func-dev; do
     assert_success "it packages with serverless" \
         npx serverless package
 
-    # verify packaged artifact by invoking it using the lambdaci "provided" docker image
+    # verify packaged artifact by invoking it using the lambdaci "provided.al2" docker image
     unzip -o  \
         target/lambda/"${target}"/test-func.zip \
         -d /tmp/lambda > /dev/null 2>&1
