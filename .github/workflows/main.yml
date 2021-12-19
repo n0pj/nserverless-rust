@@ -40,10 +40,14 @@ jobs:
       - name: Install MUSL cross tools (osx)
         if: matrix.os == 'macos-latest'
         run: brew install filosottile/musl-cross/musl-cross
+      - name: Install
+        run: npm install
       - name: Build
         shell: bash
         run: |
-          cd tests/integration/test-func && npm i -D ../../.. --silent && npx serverless package
+          cd tests/integration/test-func
+          npm i -D ../../.. --silent
+          npx serverless package
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
