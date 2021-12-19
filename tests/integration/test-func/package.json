@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "serverless": "^2.69.1",
+    "serverless": "1.71.3",
     "serverless-rust": "file:../../.."
   }
 }
