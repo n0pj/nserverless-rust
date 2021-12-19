@@ -10,7 +10,7 @@ describe("RustPlugin", () => {
         custom: {
           rust: {
             cargoFlags: "--features foo",
-            dockerImage: "notsoftprops/lambda-rust",
+            dockerImage: "notn0pj/lambda-rust",
             dockerTag: "latest",
             dockerless: true,
           },
@@ -37,7 +37,7 @@ describe("RustPlugin", () => {
     );
     assert.deepEqual(unconfigured.custom, {
       cargoFlags: "",
-      dockerImage: "softprops/lambda-rust",
+      dockerImage: "n0pj/lambda-rust",
       dockerTag: "latest",
       dockerless: false,
     });
@@ -51,7 +51,7 @@ describe("RustPlugin", () => {
           custom: {
             rust: {
               cargoFlags: "--features foo",
-              dockerImage: "notsoftprops/lambda-rust",
+              dockerImage: "notn0pj/lambda-rust",
               dockerTag: "custom-tag",
               dockerless: true,
             },
@@ -64,7 +64,7 @@ describe("RustPlugin", () => {
     );
     assert.deepEqual(configured.custom, {
       cargoFlags: "--features foo",
-      dockerImage: "notsoftprops/lambda-rust",
+      dockerImage: "notn0pj/lambda-rust",
       dockerTag: "custom-tag",
       dockerless: true,
     });
@@ -204,7 +204,7 @@ describe("RustPlugin", () => {
           custom: {
             rust: {
               cargoFlags: "--features foo",
-              dockerImage: "notsoftprops/lambda-rust",
+              dockerImage: "notn0pj/lambda-rust",
               dockerTag: "latest",
               dockerless: true,
             },
@@ -248,7 +248,7 @@ describe("RustPlugin", () => {
         "PROFILE=release",
         "-e",
         "CARGO_FLAGS=--features foo -p foo",
-        "notsoftprops/lambda-rust:latest",
+        "notn0pj/lambda-rust:latest",
       ]
     );
   });

@@ -3,6 +3,7 @@
 // https://serverless.com/blog/writing-serverless-plugins/
 // https://serverless.com/framework/docs/providers/aws/guide/plugins/
 // https://github.com/softprops/lambda-rust/
+// https://github.com/n0pj/lambda-rust/
 
 const { spawnSync } = require("child_process");
 const { homedir, platform } = require("os");
@@ -11,7 +12,7 @@ const AdmZip = require("adm-zip");
 const { mkdirSync, writeFileSync, readFileSync } = require("fs");
 
 const DEFAULT_DOCKER_TAG = "latest";
-const DEFAULT_DOCKER_IMAGE = "softprops/lambda-rust";
+const DEFAULT_DOCKER_IMAGE = "n0pj/lambda-rust";
 const RUST_RUNTIME = "rust";
 const BASE_RUNTIME = "provided.al2";
 const NO_OUTPUT_CAPTURE = { stdio: ["ignore", process.stdout, process.stderr] };
